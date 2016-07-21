@@ -34,7 +34,7 @@ class FactionsProNew implements FactionsInterface
      */
     public function getPlayerFaction(Player $player)
     {
-        return $this->getAPI()->getPlayerFaction($player);
+        return $this->getAPI()->getPlayerFaction($player->getName());
     }
 
     /**
