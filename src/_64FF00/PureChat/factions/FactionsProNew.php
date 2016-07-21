@@ -43,12 +43,12 @@ class FactionsProNew implements FactionsInterface
      */
     public function getPlayerRank(Player $player)
     {
-        if($this->getAPI()->isInFaction($player))
+        if($this->getAPI()->isInFaction($player->getName()))
         {
-            if($this->getAPI()->isOfficer($player)) {
+            if($this->getAPI()->isOfficer($player->getName())) {
                 return '*';
             }
-            elseif($this->getAPI()->isLeader($player))
+            elseif($this->getAPI()->isLeader($player->getName()))
             {
                 return '**';
             }
