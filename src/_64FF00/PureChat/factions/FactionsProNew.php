@@ -34,14 +34,14 @@ class FactionsProNew implements FactionsInterface
      */
     public function getPlayerFaction(Player $player)
     {
-        return $this->getAPI()->getSession($player)->getFaction();
+        return $this->getAPI()->getPlayerFaction($player);
     }
 
     /**
      * @param Player $player
      * @return string
      */
-    public function getPlayerRank(Player $player)
+    /*public function getPlayerRank(Player $player)
     {
         if($this->getAPI()->getSession($player)->inFaction())
         {
@@ -60,5 +60,5 @@ class FactionsProNew implements FactionsInterface
 
         // TODO
         return '';
-    }
+    }*/
 }
